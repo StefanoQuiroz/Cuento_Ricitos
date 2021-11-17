@@ -117,7 +117,7 @@ let JSON_CUENTO = {
 
                 {
                     texto: "Se comió toda la avena del plato y de pronto <br> sintió mucho sueño.",
-                    tiempo:[28.4,37.1,0.5] 
+                    tiempo:[28.4,37.4,0.5] 
                 }         
             ]
         },
