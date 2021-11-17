@@ -193,7 +193,7 @@
 #escena_01 .interact .spriteRicitos_esc01 #ojosIrisIzq{
     width: 7%;
     position: absolute;
-    top: 46%;
+    top: 45.8%;
     left: 58.62%;
     display:block;
     pointer-events: none;
@@ -202,13 +202,379 @@
 #escena_01 .interact .spriteRicitos_esc01 #ojosIrisDer{
     width: 7%;
     position: absolute;
-    top: 46%;
+    top: 45.8%;
     left: 74.18%;
     display:block;
     pointer-events: none;
 }
 
+/************ESCE02***********/
+
+#escena_02 .brazoSillon{
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    z-index: 10;
+    top: 46%;
+    left: -6%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x; 
+}
+
+.spriteSillon { 
+    background-image: url("../img/ricitosDeOro/sprite/escena03/brazo_sillon2.png");
+    background-repeat: no-repeat;
+}
+
+
+#escena_02 .silla{
+    width: 360px;
+    height: 470px;
+    position: absolute;
+    z-index: 10;
+    top: 28%;
+    left: 38%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x; 
+}
+
+.spriteSilla { 
+    background-image: url("../img/ricitosDeOro/sprite/escena03/sprite_silla.png");
+    background-repeat: no-repeat;
+}
+
+/* Escena02 COMENTADO */
+/* #escena_02 .ricitos_esc02{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    z-index: 10;
+    top: 6%;
+    left: 71%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+    transform: scaleX(-1); 
+}
+
+.spriteRicitos_esc02 { 
+    background-image: url("../img/ricitosDeOro/sprite/escena03/sprite_ricitos1.png");
+    background-repeat: no-repeat;
+} */
+                     
+/* SPRITES POR SECCIONES */
+
+.sprite_ricitos{ 
+    background-image: url("../img/ricitosDeOro/sprite/escena03/sprite_medium_ricitos.png");
+}
+
+/* #escena_02 .saltos{
+    top: 40px;
+    left: 590px;
+    width: 550px;
+    height: 300px;
+}
+
+#escena_02 .saltos .seccion1{
+    top: 40px;
+    left: 0px;
+} */
+
+#escena_02 .saltos .seccion1 .ricitosPapa1{
+    top: 62px;
+    left: 1417px;
+    width: 450px;
+    height: 450px;
+    background-position: 0px 5px;
+    opacity:0;
+    transform: scaleX(-1);
+}
+
+#escena_02 .saltos .seccion1 .ricitosPapa2{
+    top: 378px;
+    left: 1351px;
+    width: 505px;
+    height: 430px;
+    background-position: 488px 0px;
+    opacity: 0;
+    transform: scaleX(-1);
+}
+
+
+#escena_02 .saltos .seccion2 .ricitosMama1{
+    top: 71px;
+    left: 7px;
+    width: 450px;
+    height: 450px;
+    background-position: 0px 5px;
+    opacity:0;
+}
+
+#escena_02 .saltos .seccion2 .ricitosMama2{
+    top: 415px;
+    left: 13px;
+    width: 475px;
+    height: 430px;
+    background-position: 453px 440px;
+    opacity:0;
+}
+
+#escena_02 .saltos .seccion3 .ricitosHijo1{
+    top: -29px;
+    left: 606px;
+    width: 450px;
+    height: 450px;
+    background-position: 0px 5px;
+    opacity:0;
+    z-index: 50;
+}
+
+#escena_02 .saltos .seccion3 .ricitosHijo2{
+    top: 408px;
+    left: 659px;
+    width: 475px;
+    height: 417px;
+    background-position: 0px -457px;
+    opacity:0;
+    z-index: 50;
+}
+
+
+/************ESCE03***********/
+
+#escena_03 .mesa2{
+    width: 1340px;
+    height: 1500px;
+    position: absolute;
+    z-index: 10;
+    top: 46%;
+    left: 19.3%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x; 
+}
+
+.spriteMesa2 { 
+    background-image: url("../img/ricitosDeOro/sprite/escena04/mesa.png");
+    background-repeat: no-repeat;
+}
+
+#escena_03 .interact .ricitos_esc03{
+    width: 525px;
+    height: 800px;
+    position: absolute;
+    z-index: 0;
+    top: 27%;
+    left: 3.3%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x;
+}
+
+.spriteRicitos_esc03 { 
+    background-image: url("../img/ricitosDeOro/sprite/escena04/ricitos.png");
+    background-repeat: no-repeat;
+}
+
+
+#escena_03 .ricitos_esc03 .caras{
+    width: 230px;
+    height: 400px;
+    position: absolute;
+    z-index: 9;
+    top: 14%;
+    left: 38%;
+    background-position: -300% 0%;
+    background-size: 300%;
+    background-repeat: repeat-x;
+    opacity: 0;
+}
+
+.spriteRicitos_esc03 .spriteCaras{ 
+    background-image: url("../img/ricitosDeOro/sprite/escena04/sprite_caras.png");
+    background-repeat: no-repeat;
+}
+
+
+/************ESCE04***********/
+#escena_04 .ricitos_esc04Pose1{
+    width: 340px;
+    height: 500px;
+    position: absolute;
+    z-index: 9;
+    top: 11%;
+    left: 15%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    opacity: 0;
+}
+
+.spriteRicitos_esc04Pose1{ 
+    background-image: url("../img/ricitosDeOro/sprite/escena05/ricitos_papa.png");
+    background-repeat: no-repeat;
+}
+
+#escena_04 .ricitos_esc04Pose2{
+    width: 320px;
+    height: 500px;
+    position: absolute;
+    z-index: 9;
+    top: -18%;
+    left: 65%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteRicitos_esc04Pose2{ 
+    background-image: url("../img/ricitosDeOro/sprite/escena05/ricitos_mama.png");
+    background-repeat: no-repeat;
+}
+
+
+#escena_04 .ricitos_esc04Pose3{
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    z-index: 9;
+    top: -21.7%;
+    left: 88%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.spriteRicitos_esc04Pose3{ 
+    background-image: url("../img/ricitosDeOro/sprite/escena05/ricitos_hijo.png");
+    background-repeat: no-repeat;
+}
                                                   
+/************ESCE05***********/
+#escena_05 .papaOso_esc05{
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    z-index: 10;
+    top: 42.6%;
+    left: -1.7%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x; 
+}
+
+.spritePapaOso { 
+    background-image: url("../img/ricitosDeOro/sprite/escena06/oso.png");
+    background-repeat: no-repeat;
+}
+
+#escena_05 .mamaOso_esc05{
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    z-index: 10;
+    top: 45%;
+    left: 70.6%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x; 
+}
+
+.spriteMamaOso { 
+    background-image: url("../img/ricitosDeOro/sprite/escena06/osa.png");
+    background-repeat: no-repeat;
+}
+
+#escena_05 .hijoOso_esc05{
+    width: 300px;
+    height: 550px;
+    position: absolute;
+    z-index: 10;
+    top: 50.4%;
+    left: 47.3%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x; 
+}
+
+.spriteHijoOso { 
+    background-image: url("../img/ricitosDeOro/sprite/escena06/osito.png");
+    background-repeat: no-repeat;
+}
+
+/************ESCE05***********/
+#escena_06 .osito_esc06{
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    z-index: 10;
+    top: 45.8%;
+    left: 54.3%;
+    background-position: -100% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x; 
+}
+
+.spriteOsito { 
+    background-image: url("../img/ricitosDeOro/sprite/escena07/osito.png");
+    background-repeat: no-repeat;
+}
+
+#escena_06 .ricitos_esc06{
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    z-index: 10;
+    top: 31.6%;
+    left: 78.3%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x; 
+}
+
+.spriteRicitos_esc06 { 
+    background-image: url("../img/ricitosDeOro/sprite/escena07/ricitos.png");
+    background-repeat: no-repeat;
+}
+
+/************ESCE05***********/
+#escena_07 .arboles{
+    width: 370px;
+    height: 800px;
+    position: absolute;
+    z-index: 10;
+    top: -8%;
+    left: -0.6%;
+    background-position: -100% 0%;
+    background-size: 100%;
+    background-repeat: repeat-x; 
+}
+
+.spriteArboles { 
+    background-image: url("../img/ricitosDeOro/sprite/escena08/arboles.png");
+    background-repeat: no-repeat;
+}
+
+
+#escena_07 .ricitos_esc07{
+    width: 230px;
+    height: 600px;
+    position: absolute;
+    z-index: 10;
+    top: 23%;
+    left: 1.7%;
+    background-position: -200% 0%;
+    background-size: 200%;
+    background-repeat: repeat-x; 
+}
+
+.spriteRicitos_esc07 { 
+    background-image: url("../img/ricitosDeOro/sprite/escena08/sprite_ricitos.png");
+    background-repeat: no-repeat;
+}
+
 
 /*Termina el posicionamiento de sprites*/
 
@@ -231,6 +597,7 @@
 
 #escena_04 .fondo{ 
     background-image: url("../img/ricitosDeOro/esc_4_fondo.jpg");
+    background-repeat: no-repeat;
 }
 
 #escena_05 .fondo{ 
@@ -252,11 +619,11 @@
 #escena_00 .btn_interact{ top: 25%; left: 45%;}
 #escena_01 .btn_interact{ top: 48%; left: 68%;}
 #escena_02 .btn_interact {top: 460px; left: 470px;}
-#escena_03 .btn_interact {top: 300px; left: 300px;}
+#escena_03 .btn_interact {top: 61%; left: 40%;}
 #escena_04 .btn_interact{ top: 300px; left: 1280px; }
-#escena_05 .btn_interact{ top: 40%; left: 70%;}
-#escena_06 .btn_interact{ top: 450px; left: 875px;}
-#escena_07 .btn_interact{ top: 42%; left: 52%;}
+#escena_05 .btn_interact{ top: 40%; left: 40%;}
+#escena_06 .btn_interact{ top: 60%; left: 30%;}
+#escena_07 .btn_interact{ top: 36%; left: 56%;}
 
 
 
