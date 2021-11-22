@@ -26,13 +26,16 @@ let JSON_CUENTO = {
     ], 
     fx_sonido:[
         {nombre:"bosque", url:"audio/ricitosDeOro/fx/bosque.mp3"},
+        {nombre:"bosque_cortado", url:"audio/ricitosDeOro/fx/bosque_cortado.mp3"},
         {nombre:"chirrido_de_puerta", url:"audio/ricitosDeOro/fx/chirrido_de_puerta.mp3"},
         {nombre:"cuento_de_hadas", url:"audio/ricitosDeOro/fx/cuento_de_hadas.mp3"},
         {nombre:"cuento_de_hadas_cortas", url:"audio/ricitosDeOro/fx/cuento_de_hadas_cortas.mp3"},
+        {nombre:"cuento_de_hadas_cortado", url:"audio/ricitosDeOro/fx/cuento_de_hadas_cortado.mp3"},
         {nombre:"cuento_de_hadas_cortas2", url:"audio/ricitosDeOro/fx/cuento_de_hadas_cortas2.mp3"},
         {nombre:"masticando", url:"audio/ricitosDeOro/fx/masticando.mp3"},
         {nombre:"ninha_corriendo", url:"audio/ricitosDeOro/fx/ninha_corriendo.mp3"},
         {nombre:"ninha_durmiendo", url:"audio/ricitosDeOro/fx/ninha_durmiendo.mp3"},
+        {nombre:"ninha_durmiendo_cortado", url:"audio/ricitosDeOro/fx/ninha_durmiendo_cortado.mp3"},
         {nombre:"ninha_mmm", url:"audio/ricitosDeOro/fx/ninha_mmm.mp3"},
         {nombre:"ninha_sorprendida", url:"audio/ricitosDeOro/fx/ninha_sorprendida.mp3"},
         {nombre:"osa_preocupada", url:"audio/ricitosDeOro/fx/osa_preocupada.mp3"},
@@ -55,7 +58,7 @@ let JSON_CUENTO = {
             [
                 {
                     texto: "En una casita en medio del bosque vivía Papá Oso, Mamá Osa y su pequeño Osito.",
-                    tiempo:[0,9.7,5] 
+                    tiempo:[0,9.7,1] 
                 },
                 {
                     texto: "Cada mañana preparaban el desayuno, y mientras esperaban que su avena se enfriara,<br> salían a dar un paseo.",
@@ -71,7 +74,7 @@ let JSON_CUENTO = {
             [
                 {
                     texto: "Una mañana, mientras la familia paseaba, una niña de pelo rizado y rubio como el oro se asomó por la puerta.",
-                    tiempo:[0,10.9,5] 
+                    tiempo:[0,10.9,1] 
                 },
                 {
                     texto: "Como no vio a nadie dentro y era muy curiosa, entró.",
@@ -132,8 +135,16 @@ let JSON_CUENTO = {
                     tiempo:[0,10.8,0.5] 
                 },
                 {
-                    texto: "Se sentó en la segunda, pero era muy blanda; y finalmente<br>se acostó en la más pequeña que le pareció perfecta, y se durmió profundamente.",
-                    tiempo:[11.3,28.0,0.5] 
+                    texto: "Se sentó en la segunda, pero era muy blanda.",
+                    tiempo:[11.3,16.3,0.5] 
+                },
+                {
+                    texto: "Y finalmente se acostó en la más pequeña <br> que le pareció perfecta.",
+                    tiempo:[16.8,23.4,0.5] 
+                },
+                {
+                    texto: "Y se durmió profundamente.",
+                    tiempo:[23.9,27.6,0.5] 
                 }
             ]
         },
@@ -169,7 +180,7 @@ let JSON_CUENTO = {
             [
                 {
                     texto: "Subieron a su habitación para descansar y luego de olisquear su cama.",
-                    tiempo:[0,5.9,0.5] 
+                    tiempo:[0,5.9,8.5] 
                 },
                 {
                     texto: "Papá Oso vociferó: ¡Alguien ha estado en mi cama!",
@@ -193,11 +204,15 @@ let JSON_CUENTO = {
             [
                 {
                     texto: "Ricitos de Oro despertó con los gritos y vio a los tres osos frente a ella.",
-                    tiempo:[0,7.3,0.5] 
+                    tiempo:[0,7.3,8.5] 
                 },
                 {
-                    texto: "Dio un salto, salió corriendo despavorida,<br> y los tres osos nunca más la volvieron a ver.",
-                    tiempo:[7.8,17.2,0.5] 
+                    texto: "Dio un salto, y salió corriendo despavorida.",
+                    tiempo:[7.8,12.4,0.5] 
+                },
+                {
+                    texto: "Y los tres osos nunca más la volvieron a ver.",
+                    tiempo:[12.9,17.3,0.5] 
                 }
             ]
         }
@@ -323,10 +338,9 @@ let ANIM = {
         
         /* Escena 07 */
         ANIM.main_tl.add(TweenMax.set("#escena_07", {scale:1.2, x:70, y:160}), 'escena_7+=0.01')
+      
 
-
-
-        ANIM.main_tl.addLabel('0_0_audio', 'escena_0+=0.1');
+        /* ANIM.main_tl.addLabel('0_0_audio', 'escena_0+=0.1');
         ANIM.main_tl.addLabel('0_0_audio_fade', '0_0-=2');
         ANIM.main_tl.addCallback(function () {
             Player.playSoundFX('cuento_de_hadas_cortas');
@@ -334,18 +348,34 @@ let ANIM = {
         }, '0_0_audio');
         ANIM.main_tl.addCallback(function () {
             ANIM.fadeVolume('cuento_de_hadas_cortas',1,0,2);
-        }, "0_0_audio_fade");
+        }, "0_0_audio_fade"); */
         
-        ANIM.main_tl.addLabel('1_0_audio', 'escena_1+=0.1');
+        /* ANIM.main_tl.addLabel('1_0_audio', 'escena_1+=0.1');
         ANIM.main_tl.addLabel('1_0_audio_fade', '1_0-=2');
         ANIM.main_tl.addCallback(function () {
             Player.playSoundFX('bosque');
         }, '1_0_audio');
         ANIM.main_tl.addCallback(function () {
             ANIM.fadeVolume('bosque',1,0,2);
-        }, "1_0_audio_fade");
+        }, "1_0_audio_fade"); */
 
-
+        ANIM.main_tl.addLabel('6_0_audio', 'escena_6+=0.1');
+        ANIM.main_tl.addLabel('6_0_audio_fade', '6_0-=2');
+        ANIM.main_tl.addCallback(function () {
+            Player.playSoundFX('ninha_durmiendo');
+        }, '6_0_audio');
+        ANIM.main_tl.addCallback(function () {
+            ANIM.fadeVolume('ninha_durmiendo',1,0,2);
+        }, "6_0_audio_fade");
+        
+        ANIM.main_tl.addLabel('7_0_audio', 'escena_7+=0.1');
+        ANIM.main_tl.addLabel('7_0_audio_fade', '7_0-=2');
+        ANIM.main_tl.addCallback(function () {
+            Player.playSoundFX('bosque_cortado');
+        }, '7_0_audio');
+        ANIM.main_tl.addCallback(function () {
+            ANIM.fadeVolume('bosque_cortado',1,0,2);
+        }, "7_0_audio_fade");
 
         /*INICIO*/
         /*LLAMADAS Y FUNCIONES ESCENA 0*/ //<-----------------------------------------------------
@@ -372,8 +402,6 @@ let ANIM = {
             //ANIM.interactividad(1,undefined,'secundario');
             Player.tooglePlayPauseIco();
             Player.resetSubtitulos();
-            Player.playSoundFX('paso_tiempo');
-            Player.cambiaVolume('paso_tiempo', 0.2);
         }, "fin_escena_1");
         
         /*LLAMADAS Y FUNCIONES ESCENA 2*/ //<-----------------------------------------------------
@@ -457,8 +485,8 @@ let ANIM = {
             Player.activaBtnSiguiente();
             Player.tooglePlayPauseIco();
             Player.resetSubtitulos();
-            Player.playSoundFX('bosque');
-            Player.cambiaVolume('bosque', true);
+            Player.playSoundFX('cuento_de_hadas');
+            Player.cambiaVolume('cuento_de_hadas', true);
         }, "fin_escena_7");
             
         ANIM.creaAnimInteractividad();
@@ -472,8 +500,8 @@ let ANIM = {
         ANIM.anim_interact_desayuno
             .addLabel('inicio')
             .addCallback(function(){
-                Player.playSoundFX('cuento_de_hadas_cortas2');
-                Player.cambiaVolume('cuento_de_hadas_cortas2', 0.4);
+                Player.playSoundFX('cuento_de_hadas_cortado');
+                Player.cambiaVolume('cuento_de_hadas_cortado', 0.4);
             })
             //.fromTo('#escena_00 .papaOso_esc00', 0,{backgroundPosition:'0% 0%'},{backgroundPosition:'-100% 0%',scaleX:0.5, scaleY:0.5})
             //.fromTo('#escena_00 .papaOso_esc00', 2.5,{backgroundPosition:'0% 0%'},{backgroundPosition:'-100% 0%',ease: Elastic.easeOut.config(1,0.1),css:{scaleX:1, scaleY:1, opacity:1}})
@@ -497,6 +525,8 @@ let ANIM = {
         ANIM.anim_interact_entrada
             .addLabel('inicio')
             .addCallback(function(){
+                Player.playSoundFX('bosque_cortado');
+                Player.cambiaVolume('bosque_cortado', 0.4);
                 Player.playSoundFX('chirrido_de_puerta');
                 Player.cambiaVolume('chirrido_de_puerta', 0.5);
             },"+=1")
@@ -605,13 +635,16 @@ let ANIM = {
             .addCallback(function(){
                 Player.playSoundFX('masticando');
                 Player.cambiaVolume('masticando', 1);
-            }, 10)
+            }, "+=0.5")
             .fromTo('#escena_03 .ricitos_esc03',0.5,{backgroundPosition:'0% 0%'},{x:940, ease: Power4.easeOut}, 10)
             
             .fromTo('#escena_03 .ricitos_esc03',2,{backgroundPosition:'0% 0%'},{backgroundPosition:'200% 0%',ease: SteppedEase.config(2)})
         
             .fromTo('#escena_03 .caras',1,{backgroundPosition:'100% 0%'},{autoAlpha:1})
-            
+            .addCallback(function(){
+                Player.playSoundFX('ninha_mmm');
+                Player.cambiaVolume('ninha_mmm', 0.4);
+            }, "-=0.75")
             .fromTo('#escena_03 .ricitos_esc03',3,{backgroundPosition:'0% 0%'},{y:-110},'-=1')
             .addLabel('final');
          ANIM.anim_interact_probadita.pause();
@@ -630,8 +663,8 @@ let ANIM = {
             .fromTo('#escena_04 .ricitos_esc04Pose2',0.2,{backgroundPosition:'0% 0%'},{backgroundPosition:'100% 0%',y:-1000,ease: Power4.ease},'+=2')
             //Cama osito
             .addCallback(function(){
-                Player.playSoundFX('ninha_mmm');
-                Player.cambiaVolume('ninha_mmm', 0.4);
+                Player.playSoundFX('ninha_durmiendo_cortado');
+                Player.cambiaVolume('ninha_durmiendo_cortado', 0.4);
              }, 8)
             .fromTo('#escena_04 .ricitos_esc04Pose3',1,{backgroundPosition:'0% 0%'},{backgroundPosition:'100% 0%',y:430.5,ease: Power3.easeOut}, 8)
         ANIM.anim_interact_camas.pause();
@@ -644,17 +677,17 @@ let ANIM = {
                 Player.playSoundFX('oso_molesto_cortado');
                 Player.cambiaVolume('oso_molesto_cortado', 0.5);
             },1)
-            .fromTo('#escena_05 .papaOso_esc05',2,{backgroundPosition:'0% 0%'},{backgroundPosition:'-200% 0%', ease: SteppedEase.config(2), repeat: 2},1)
+            .fromTo('#escena_05 .papaOso_esc05',2,{backgroundPosition:'0% 0%'},{backgroundPosition:'-200% 0%', ease: SteppedEase.config(2), repeat: 1},1)
             .addCallback(function(){
-                Player.playSoundFX('osa_preocupada_cortado');
-                Player.cambiaVolume('osa_preocupada_cortado', 0.5);
+                Player.playSoundFX('osa_preocupada');
+                Player.cambiaVolume('osa_preocupada', 0.5);
             }, "+=0")
-            .fromTo('#escena_05 .mamaOso_esc05',2,{backgroundPosition:'0% 0%'},{backgroundPosition:'-200% 0%', ease: SteppedEase.config(2), repeat: 2}, "+=0")
+            .fromTo('#escena_05 .mamaOso_esc05',2,{backgroundPosition:'0% 0%'},{backgroundPosition:'-200% 0%', ease: SteppedEase.config(2), repeat: 0}, "+=0")
             .addCallback(function(){
                 Player.playSoundFX('oso_pequenho_cortado');
                 Player.cambiaVolume('oso_pequenho_cortado', 0.5);
             },"+=0")
-            .fromTo('#escena_05 .hijoOso_esc05',2,{backgroundPosition:'0% 0%'},{backgroundPosition:'-200% 0%', ease: SteppedEase.config(2), repeat: 2},"+=0")
+            .fromTo('#escena_05 .hijoOso_esc05',2,{backgroundPosition:'0% 0%'},{backgroundPosition:'-200% 0%', ease: SteppedEase.config(2), repeat: 1},"+=0")
             .addLabel('final');
         ANIM.anim_interact_ososMolestos.pause();
 
