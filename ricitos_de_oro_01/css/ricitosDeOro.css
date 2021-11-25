@@ -1,7 +1,7 @@
 .creditos .imagen_portada,
 #final_cuento .creditos .imagen_portada{
 /*    display: grid;*/
-   background-image: url("../img/ricitosDeOro/01.jpg");
+   background-image: url("../img/ricitosDeOro/02.jpg");
 
     background-size: cover;
     background-position: 58%;
@@ -397,6 +397,42 @@
     background-repeat: no-repeat;
 }
 
+#escena_03 .ricitos_esc03 .caras2{
+    width: 230px;
+    height: 400px;
+    position: absolute;
+    z-index: 9;
+    top: 14%;
+    left: 38%;
+    background-position: -300% 0%;
+    background-size: 300%;
+    background-repeat: repeat-x;
+    opacity: 0;
+}
+
+.spriteRicitos_esc03 .spriteCaras2{ 
+    background-image: url("../img/ricitosDeOro/sprite/escena04/sprite_caras.png");
+    background-repeat: no-repeat;
+}
+
+#escena_03 .ricitos_esc03 .caras3{
+    width: 230px;
+    height: 400px;
+    position: absolute;
+    z-index: 9;
+    top: 14%;
+    left: 38%;
+    background-position: -300% 0%;
+    background-size: 300%;
+    background-repeat: repeat-x;
+    opacity: 0;
+}
+
+.spriteRicitos_esc03 .spriteCaras2{ 
+    background-image: url("../img/ricitosDeOro/sprite/escena04/sprite_caras.png");
+    background-repeat: no-repeat;
+}
+
 
 /************ESCE04***********/
 #escena_04 .ricitos_esc04Pose1{
@@ -515,6 +551,50 @@
     background-position: -100% 0%;
     background-size: 200%;
     background-repeat: repeat-x; 
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap');
+#escena_06 #z{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    z-index: 1;
+    top: 42.1%;
+    left: 85.4%;
+    color: #edf4f4;
+    font-size: 50px;
+    font-weight: 900;
+    opacity: 0;
+    font-family: 'Bangers', cursive;    
+}
+
+#escena_06 #z2{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    z-index: 1;
+    top: 46.3%;
+    left: 88.5%;
+    color: #edf4f4;
+    font-size: 50px;
+    font-weight: 900;
+    opacity: 0;
+    font-family: 'Bangers', cursive;     
+}
+
+#escena_06 #z3{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    z-index: 1;
+    top: 46.3%;
+    left: 88.5%;
+    color: #edf4f4;
+    font-size: 50px;
+    font-weight: 900;
+    opacity: 0;
+    font-family: 'Bangers', cursive;     
 }
 
 .spriteOsito { 

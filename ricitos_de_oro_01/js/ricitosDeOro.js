@@ -1,14 +1,13 @@
 //archivo de configuración
 let JSON_CUENTO = {
     nombre:"Ricitos de Oro",
-    tipo:"Cuento de hadas",
-    descripcion:"Éste relato es una adaptación libre de una historia folclórica atribuida a Robert Southey en 1837. En ella se narra la historia de una familia de tres osos y de una niña curiosa que decide entrar en su hogar desocupado. Ricitos apenas entra empieza a curiosear por cada cuarto, primero encuentra tres sillas, luego tres platos de avena; y por último tres camas. ¿Qué sucederá una vez que lleguen los dueños? Descubre las aventuras de ricitos, en un viaje por lo ajeno.",
+    tipo:"Cuento de hadas / animales",
+    descripcion:"Este relato es una adaptación libre de una historia folclórica atribuida a Robert Southey en 1837. En ella se narra la historia de una familia de tres osos y de una niña curiosa que entra en su hogar porque lo cree desocupado. ¿Qué sucederá una vez que lleguen los dueños?",
     creditos:[
-                ["Adaptación:","Fiorenza Sartori Del Campo"],
+                ["Adaptación:","Copec"],
                 ["Ilustraciones:","Copec"],
-                ["Narración:","Constanza Ried Silva"],
-                ["Arreglos musicales:","Copec y Entrelíneas"],
-                ["Edición a cargo de:","Constanza Ried Silva<br>Verónica Vives Cofré<br>Fundación Entrelíneas"],
+                ["Narración:","Nicole Castillo Ramírez"],
+                ["Edición a cargo de:","Copec"],
                 ["Montaje y desarrollo web:","Agencia Match"],
                 ["Créditos de sonidos:","Revise detalles <a href='#' target='_blank'>aquí</a>"] 
     ],
@@ -192,7 +191,7 @@ let JSON_CUENTO = {
                 },
                 {
                     texto: "Y sollozando, Osito gritó: ¡Hay una niña en mi cama!",
-                    tiempo:[15.8,21.4,0.5] 
+                    tiempo:[15.8,21.8,0.5] 
                 }
             ]
         },
@@ -335,6 +334,41 @@ let ANIM = {
 
         /* Escena 06 */
         ANIM.main_tl.add(TweenMax.set("#escena_06", {scale:1.1, x:0, y:-70}), 'escena_6+=0.01')
+        //let zetas = ['#escena_06 #z','#escena_06 #z','#escena_06 #z','#escena_06 #z'];
+        let desplazamientoZ = new TimelineMax({repeat: -1});
+        //for (let i=0; i<zetas.length; i++){
+            desplazamientoZ
+            .to('#escena_06 #z', 2.5, {scale: 1.6, y:-300, x:-100, ease:SteppedEase.config(30), autoAlpha: 1})
+            .to('#escena_06 #z', 0.8, { opacity: 0, ease: Power1.easeInOut }, '-=1.1')
+            .to('#escena_06 #z2', 2.5, {scale: 1.5, y:-300, x:-160, ease:SteppedEase.config(30),  autoAlpha: 1}, "-=2.1")
+            .to('#escena_06 #z2', 0.8, { opacity: 0, ease: Power1.easeInOut }, '-=0.6')
+            .to('#escena_06 #z3', 2.5, {scale: 1.5, y:-300, x:-160, ease:SteppedEase.config(30),  autoAlpha: 1}, "-=1.9")
+            .to('#escena_06 #z3', 0.8, { opacity: 0, ease: Power1.easeInOut }, '-=0.6' )
+
+            /* .to('#escena_06 #z',2,{y:-300,x:-160,ease:SteppedEase.config(40),repeat:-1,  autoAlpha: 1})
+            .to('#escena_06 #z2',2,{y:-200,x:-100,ease:SteppedEase.config(40),repeat:-1,  autoAlpha: 1})
+            .to('#escena_06 #z3',2,{y:-100,x:-40,ease:SteppedEase.config(40),repeat:-1,  autoAlpha: 1}) */
+
+            //.to('#escena_06 #z', 4.5, { scale: 1.3, x: -300, y:-1000, ease: Power1.easeOut })
+            //.to('#escena_06 #z', 0.8, { opacity: 0, ease: Power1.easeInOut }, '-=2')
+            //.to('#escena_06 #z2', 4, { scale: 1.4, x:-350, y:-1000, ease: Power1.easeOut }, '-=4')
+            //.to('#escena_06 #z2', 0.7, { opacity: 0, ease: Power1.easeInOut }, '-=2.5')
+            //.to('#escena_06 #z3', 4, { scale: 1.5,x:-450, y:-1000, ease: Power1.easeOut }, '-=3.8')
+            //.to('#escena_06 #z3', 0.6, { opacity: 0, ease: Power1.easeInOut }, '-=2.4' )   
+            
+            //.to('#escena_06 #z', 3, { scale: 5.5, x: -300, y:-300, ease: Power1.easeOut, repeat: -1}, "-=1")
+            //.to('#escena_06 #z2', 6, { scale: 7, x: -500, y:-500, ease: Power1.easeOut, repeat: -1}, "-=3")
+            //.to('#escena_06 #z3', 4, { scale: 10.5, x: -700, y:-700, ease: Power1.easeOut, repeat: -1}, "-=1")
+            //.to('#escena_06 #z', 4, { scale: 5, x: -300, y:-300, ease: Power1.easeOut, repeat: -1}, "-=15")
+            //.to('#escena_06 #z', 0.8, { opacity: 0, ease: Power1.easeInOut }, '-=2')
+            /* .to('#escena_06 #z', 3, { scale: 1.2, x: -300, y:-300, ease: Power1.easeOut}, "-=2.1")
+            .to('#escena_06 #z', 0.7, { opacity: 0, ease: Power1.easeInOut }, '-=2.5')
+            .to('#escena_06 #z', 3, { scale: 1.3, x: -300, y:-300, ease: Power1.easeOut}, "-=2.8")
+            .to('#escena_06 #z', 0.1, { opacity: 0, ease: Power1.easeInOut }, '-=2') */
+        //}
+        ANIM.main_tl.add(desplazamientoZ,'6_0-=8');
+        
+     
         
         /* Escena 07 */
         ANIM.main_tl.add(TweenMax.set("#escena_07", {scale:1.2, x:70, y:160}), 'escena_7+=0.01')
@@ -496,7 +530,7 @@ let ANIM = {
     creaAnimInteractividad: () => {
         //sprints
         //Escena00
-        ANIM.anim_interact_desayuno = new TimelineMax({repeat:0}); // creo la interacción
+        ANIM.anim_interact_desayuno = new TimelineMax(); // creo la interacción
         ANIM.anim_interact_desayuno
             .addLabel('inicio')
             .addCallback(function(){
@@ -601,7 +635,7 @@ let ANIM = {
              
              .fromTo('#escena_03 .caras',0.5,{backgroundPosition:'0% 0%'},{autoAlpha:0},4)
            
-             //LA SEGUNDA PROBADITA
+            //LA SEGUNDA PROBADITA
             .addCallback(function(){
             Player.playSoundFX('masticando');
             Player.cambiaVolume('masticando', 1);
@@ -618,7 +652,7 @@ let ANIM = {
                 clamp: false 
             }), x:480,yoyo:false})   
             //Comentar escena de cara de terror
-            .fromTo('#escena_03 .caras',1,{backgroundPosition:'200% 0%'},{autoAlpha:1},7) 
+            .fromTo('#escena_03 .caras2',1,{backgroundPosition:'200% 0%'},{autoAlpha:1},7) 
             
             .fromTo('#escena_03 .ricitos_esc03',0.8,{backgroundPosition:'0% 0%'},{ease: RoughEase.ease.config({
                 template: Power3.easeOut,
@@ -629,18 +663,18 @@ let ANIM = {
                 clamp: false 
             }), x:500,yoyo:false},8)   
             
-            .fromTo('#escena_03 .caras',0.5,{backgroundPosition:'200% 0%'},{autoAlpha:0},9)
+            .fromTo('#escena_03 .caras2',0.5,{backgroundPosition:'200% 0%'},{autoAlpha:0},9)
 
             //LA TERCERA PROBADITA
             .addCallback(function(){
                 Player.playSoundFX('masticando');
                 Player.cambiaVolume('masticando', 1);
             }, "+=0.5")
-            .fromTo('#escena_03 .ricitos_esc03',0.5,{backgroundPosition:'0% 0%'},{x:940, ease: Power4.easeOut}, 10)
+            .fromTo('#escena_03 .ricitos_esc03',0.5,{backgroundPosition:'0% 0%'},{x:960, ease: Power4.easeOut}, 10)
             
             .fromTo('#escena_03 .ricitos_esc03',2,{backgroundPosition:'0% 0%'},{backgroundPosition:'200% 0%',ease: SteppedEase.config(2)})
         
-            .fromTo('#escena_03 .caras',1,{backgroundPosition:'100% 0%'},{autoAlpha:1})
+            .fromTo('#escena_03 .caras3',1,{backgroundPosition:'100% 0%'},{autoAlpha:1})
             .addCallback(function(){
                 Player.playSoundFX('ninha_mmm');
                 Player.cambiaVolume('ninha_mmm', 0.4);
@@ -749,7 +783,21 @@ let ANIM = {
         //estado inicial
         
 //      TweenMax.killTweensOf("#escena_00 .stuff");
-        TweenMax.set('#escena_00 .interact',{scale:1, transformOrigin:'1280px 395px'});
+        //TweenMax.set('#escena_00 .interact',{scale:1, transformOrigin:'1280px 395px'});
+        TweenMax.set('#escena_00 .papaOso_esc00',{alpha:0});
+        TweenMax.set('#escena_00 .mamaOso_esc00',{alpha:0});
+        TweenMax.set('#escena_00 .osito_esc00',{alpha:0});
+        TweenMax.set('#escena_01 .puerta',{backgroundPosition:'0% 0%'});
+        TweenMax.set('#escena_01 .ricitosDoble_esc01',{x:0,y:0});
+        TweenMax.set('#escena_02 .silla',{backgroundPosition:'0% 0%'});
+        TweenMax.set('#escena_02 .saltos .seccion3 .ricitosHijo2',{alpha:0});
+        TweenMax.set('#escena_03 .caras',{backgroundPosition:'0% 0%', autoAlpha:0,   immediateRender:true});
+        TweenMax.set('#escena_03 .caras2',{backgroundPosition:'200% 0%'});
+        TweenMax.set('#escena_03 .caras3',{alpha:0});   
+        TweenMax.set('#escena_03 .ricitos_esc03',{x:0, y:0, backgroundPosition:'0% 0%'});
+        TweenMax.set('#escena_04 .ricitos_esc04Pose3',{y:0});
+        TweenMax.set('#escena_06 .osito_esc06',{backgroundPosition:'100% 0%'});
+        TweenMax.set('#escena_06 .ricitos_esc06',{backgroundPosition:'0% 0%'});
         ANIM.pauseWaitSound();
         ANIM.pauseAnimaciones();
         $('.indicador_interactividad').css({'display':'none'});
