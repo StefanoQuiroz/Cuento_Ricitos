@@ -423,6 +423,8 @@ let ANIM = {
             ANIM.interactividad(0); 
             Player.tooglePlayPauseIco();
             Player.resetSubtitulos();
+            Player.playSoundFX('cuento_de_hadas_cortado');
+            Player.cambiaVolume('cuento_de_hadas_cortado', 0.4);
         }, "fin_escena_0"); 
 
         ANIM.main_tl.addCallback(function () {
@@ -533,10 +535,10 @@ let ANIM = {
         ANIM.anim_interact_desayuno = new TimelineMax(); // creo la interacción
         ANIM.anim_interact_desayuno
             .addLabel('inicio')
-            .addCallback(function(){
+            /* .addCallback(function(){
                 Player.playSoundFX('cuento_de_hadas_cortado');
                 Player.cambiaVolume('cuento_de_hadas_cortado', 0.4);
-            })
+            }) */
             //.fromTo('#escena_00 .papaOso_esc00', 0,{backgroundPosition:'0% 0%'},{backgroundPosition:'-100% 0%',scaleX:0.5, scaleY:0.5})
             //.fromTo('#escena_00 .papaOso_esc00', 2.5,{backgroundPosition:'0% 0%'},{backgroundPosition:'-100% 0%',ease: Elastic.easeOut.config(1,0.1),css:{scaleX:1, scaleY:1, opacity:1}})
             //.fromTo('#escena_00 .papaOso_esc00', 0,{backgroundPosition:'0% 0%'},{autoAlpha:1},0)

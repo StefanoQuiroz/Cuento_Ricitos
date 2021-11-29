@@ -1,7 +1,7 @@
 .creditos .imagen_portada,
 #final_cuento .creditos .imagen_portada{
 /*    display: grid;*/
-   background-image: url("../img/ricitosDeOro/02.jpg");
+   background-image: url("../img/ricitosDeOro/ricitosPortada.jpg");
 
     background-size: cover;
     background-position: 58%;
