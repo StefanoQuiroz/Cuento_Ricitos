@@ -305,15 +305,23 @@ let ANIM = {
         //ANIM.main_tl.add(TweenMax.fromTo('#escena_01 .ricitos_esc01', 1,{backgroundPosition:'0% 0%', css:{scaleX:0.88, scaleY:0.88}},{backgroundPosition:'-100% 0%', duration:5, ease: Elastic.easeOut.config(1,0.1)},1), '1_0-=0.1')
         ANIM.main_tl.add(TweenMax.fromTo('#escena_01 .ricitos_esc01', 0.9,{backgroundPosition:'0% 0%'},{opacity:1, duration:3, ease: Elastic.easeOut.config(1,0.2), y:-474},0), '1_0-=0.1')
         
-        let desplazamientoX = new TimelineMax();
-        desplazamientoX
-            //.fromTo("#escena_01",12,{x:-460,y:-1290, scale:1.25},{x:-460,y:180, scale:1.15, ease:Power1.easeInOut, immediateRender:true})
+        let preAnimacion_1_0 = new TimelineMax();
+        preAnimacion_1_0
+            .addCallback(function(){
+                Player.playSoundFX('bosque');
+                Player.cambiaVolume('bosque', 0.4);
+            })
+        ANIM.main_tl.add(preAnimacion_1_0,'1_0-=0');
+        
+        
+        let preAnimacion_1_1 = new TimelineMax();
+        preAnimacion_1_1
             .fromTo("#escena_01",12,{scale:1.4, x:250, y:67},{scale:1.4, x:-384,y:67, ease:Power1.easeInOut, immediateRender:true},1)
             .fromTo("#escena_01 .ricitos_esc01", 1.6, {backgroundPosition:'0% 0%'},{x:610, ease:Power1.easeInOut, immediateRender:true},1)
             /* Para desaparecerla con autoAlpha: 0 */
             .fromTo("#escena_01 .ricitos_esc01", 0.01, {backgroundPosition:'0% 0%'},{autoAlpha: 0, immediateRender:true},3)
             .fromTo("#escena_01 .fondoBosque",12,{scale:1, x:0, y:0},{scale:1, x:570,y:0, ease:Power1.easeInOut, immediateRender:true},1)
-        ANIM.main_tl.add(desplazamientoX,'1_1-=3');
+        ANIM.main_tl.add(preAnimacion_1_1,'1_1-=3');
 
         /* Escena 03 */
         ANIM.main_tl.add(TweenMax.set("#escena_03", {scale:1.2, x:90, y:15}), 'escena_3+=0.01')
@@ -423,8 +431,8 @@ let ANIM = {
             ANIM.interactividad(0); 
             Player.tooglePlayPauseIco();
             Player.resetSubtitulos();
-            Player.playSoundFX('cuento_de_hadas_cortado');
-            Player.cambiaVolume('cuento_de_hadas_cortado', 0.4);
+            Player.playSoundFX('cuento_de_hadas');
+            ANIM.fadeVolume('cuento_de_hadas',0.6,0,16);
         }, "fin_escena_0"); 
 
         ANIM.main_tl.addCallback(function () {
@@ -555,18 +563,18 @@ let ANIM = {
 
         const ojoI = ['#escena_01 #ojosIrisIzq'];
         const ojoD = ['#escena_01 #ojosIrisDer'];
-
+            
         //Escena01
         ANIM.anim_interact_entrada = new TimelineMax({repeat:0}); // creo la interacción
         ANIM.anim_interact_entrada
             .addLabel('inicio')
             .addCallback(function(){
-                Player.playSoundFX('bosque_cortado');
-                Player.cambiaVolume('bosque_cortado', 0.4);
                 Player.playSoundFX('chirrido_de_puerta');
                 Player.cambiaVolume('chirrido_de_puerta', 0.5);
             },"+=1")
+
             //le cambie de 30 => 5 en el delay
+
             .fromTo('#escena_01 .puerta',1,{backgroundPosition:'0% 0%'},{backgroundPosition:'100% 0%', ease: SteppedEase.config(1)},1)
             .fromTo('#escena_01 .ricitosDoble_esc01',2,{backgroundPosition:'100% 0%'},{x:-250},2)
             .fromTo(ojoI,1.1,{backgroundPosition:'0% 0%'},{x:-13.35, yoyo:true, repeat:3},4)
@@ -690,19 +698,27 @@ let ANIM = {
         ANIM.anim_interact_camas
             .addLabel('inicio')
             //Cama papa oso
-            .fromTo('#escena_04 .ricitos_esc04Pose1',0.5,{backgroundPosition:'0% 0%'},{backgroundPosition:'200% 0%',autoAlpha:1}) 
-            .fromTo('#escena_04 .ricitos_esc04Pose1',0.3,{backgroundPosition:'0% 0%'},{backgroundPosition:'200% 0%',x:315, ease: Power3.easeOut})
-            .fromTo('#escena_04 .ricitos_esc04Pose1',0.7,{backgroundPosition:'0% 0%'}, {backgroundPosition:'100% 0%',y:-20,repeat:4,ease:Power3.easeOut})
-            .fromTo('#escena_04 .ricitos_esc04Pose1',0.2,{backgroundPosition:'0% 0%'},{backgroundPosition:'100% 0%',y:-1000,ease: Power3.ease}) 
-            //Cama mama osa
-            .fromTo('#escena_04 .ricitos_esc04Pose2',0.8,{backgroundPosition:'0% 0%'},{backgroundPosition:'100% 0%',y:300,ease: Elastic.easeOut.config(1,0.5)},5)
-            .fromTo('#escena_04 .ricitos_esc04Pose2',0.2,{backgroundPosition:'0% 0%'},{backgroundPosition:'100% 0%',y:-1000,ease: Power4.ease},'+=2')
+            .fromTo('#escena_04 .ricitos_esc04Pose1',0.5,{backgroundPosition:'0% 0%'},{backgroundPosition:'200% 0%',autoAlpha:1}, 0) 
+            .fromTo('#escena_04 .ricitos_esc04Pose1',0.3,{backgroundPosition:'0% 0%'},{backgroundPosition:'200% 0%',x:315, ease: Power3.easeOut}, 1)
+            .fromTo('#escena_04 .ricitos_esc04Pose1',0.7,{backgroundPosition:'0% 0%'}, {backgroundPosition:'100% 0%',y:-20,repeat:4,ease:Power3.easeOut}, 1)
+            .fromTo('#escena_04 .ricitos_esc04Pose1',0.2,{backgroundPosition:'0% 0%'},{backgroundPosition:'100% 0%',y:-1000,ease: Power3.ease}, 5) 
+            
+            .fromTo('#escena_04 .ricitos_esc04Pose2',0.8,{backgroundPosition:'0% 0%'},{backgroundPosition:'100% 0%',y:300,ease: Elastic.easeOut.config(1,0.5)},6)
+            .fromTo('#escena_04 .ricitos_esc04Pose2',0.2,{backgroundPosition:'0% 0%'},{backgroundPosition:'100% 0%',y:-1000,ease: Power4.ease},'+=1')
+            .addCallback(function(){
+                Player.playSoundFX('ninha_durmiendo_cortado');
+                Player.cambiaVolume('ninha_durmiendo_cortado', 1);
+            }, 8)
+            .fromTo('#escena_04 .ricitos_esc04Pose3',1,{backgroundPosition:'0% 0%'},{backgroundPosition:'100% 0%',y:430.5,ease: Power3.easeOut}, 8)
+
+            /* //Cama mama osa
+            
             //Cama osito
             .addCallback(function(){
                 Player.playSoundFX('ninha_durmiendo_cortado');
                 Player.cambiaVolume('ninha_durmiendo_cortado', 0.4);
              }, 8)
-            .fromTo('#escena_04 .ricitos_esc04Pose3',1,{backgroundPosition:'0% 0%'},{backgroundPosition:'100% 0%',y:430.5,ease: Power3.easeOut}, 8)
+             */
         ANIM.anim_interact_camas.pause();
 
         //Escena05
